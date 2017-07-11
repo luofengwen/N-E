@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>counters</title>
+	<style>
+		ul {counter-reset: nestification;list-style: none;}
+		li:before {content: counters(nestification,'.') "."; counter-increment: nestification;}
+	</style>
+</head>
+<body>
+	<h3>Counters生成嵌套目录</h3>
+	<ul>
+		<li>
+			一级目录
+			<ul>
+				<li>二级目录</li>
+				<li>二级目录</li>
+				<li>二级目录</li>
+			</ul>
+		</li>
+		<li>
+			一级目录
+		</li>
+		<li>
+			一级目录
+		</li>
+		<li>
+			一级目录
+			<ul>
+				<li>二级目录</li>
+				<li>
+					二级目录
+					<ul>
+						<li>三级目录</li>
+						<li>三级目录</li>
+						<li>三级目录</li>
+						<li>三级目录</li>
+						<li>三级目录</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			一级目录
+		</li>
+	</ul>
+</body>
+</html>
