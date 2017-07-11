@@ -7,3 +7,5 @@
 - [表单](https://zayne72.github.io/N-E/html/form.html) 
 - [表格](https://zayne72.github.io/N-E/html/table.html)
 - [书榜](https://zayne72.github.io/N-E/html/booklist.html)
+- [counter动态展示](https://zayne72.github.io/N-E/html/counter.html)
+- [counters目录](https://zayne72.github.io/N-E/html/counters.html)
