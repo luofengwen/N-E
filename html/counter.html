@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用css计数器动态展示</title>
+	<style>
+		ul {counter-reset: course;}
+		ul li label input:checked{counter-increment: course;}
+		strong:after {content:counter(course);color: #f00;}
+		label {cursor: pointer;}
+	</style>
+</head>
+<body>
+	<h3>请按需选择要学科目</h3>
+	<ul>
+		<li><label for="learn1"><input type="checkbox" id="learn1">页面制作</label></input></li>
+		<li><label for="learn2"><input type="checkbox" id="learn2">JS程序设计</label></input></li>
+		<li><label for="learn3"><input type="checkbox" id="learn3">DOM编程艺术</label></input></li>
+		<li><label for="learn4"><input type="checkbox" id="learn4">页面架构</label></input></li>
+		<li><label for="learn5"><input type="checkbox" id="learn5">产品前端架构</label></input></li>
+		<li><label for="learn6"><input type="checkbox" id="learn6">Mini项目实战</label></input></li>
+	</ul>
+	<p>您选择了&nbsp;<strong></strong>&nbsp;门课程</p>
+</body>
+</html>
