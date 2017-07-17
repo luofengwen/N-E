@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易两栏自适应</title>
+</head>
+<body>
+	<div class="parent">
+		<div class="side">侧栏</div>
+		<div class="main">主栏</div>
+	</div>
+	<!-- html5新属性,style标签的scoped属性,有了它样式可以安置于整个文档任何位置,仅为记忆和熟悉用法,知道有这么一回事儿.坚决拥护结构与样式分离 -->
+	<style scoped>
+		* {margin:0;padding:0;border:0;}
+		.parent {font:50px "Microsoft Yahei",sans-serif;text-align:center;color:#fff;line-height:200px;margin:0 auto;display:flex;}
+		.side {margin-right:10px;flex-basis:200px;background: #f00;}
+		.main {order:1;flex:1;background: #00f;}
+	</style>
+</body>
+</html>
