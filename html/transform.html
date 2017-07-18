@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>transform</title>
+  <style>
+      /*reset*/
+    * {margin:0;padding:0;border:0;}
+    .container {position:relative;width:260px;height:260px;font:bold 172px/260px Arial,sans-serif;color:#fff;text-align:center;white-space:pre-wrap;word-break:break-all;box-sizing:border-box;background: rgba(255,0,0,0.5);margin:72px auto;}
+    .container pre {position:absolute;left:0;top:0;width:100%;height:100%;background: rgba(255,0,0,0.75);}
+    /*容器最外层设置perspective,呈现3D效果.该属性,值越大透视效果越明显*/
+    .container {perspective:1500px;}
+    /*多个transform元素若想保留3D空间,需要在其父元素上设置transform-style*/
+    .container > div {position:absolute;left:0;top:0;width:100%;height:100%;transform-style:preserve-3d;}
+    /*为了能看出正反面效果,这里先把某个元素旋转180度*/
+    .container pre:first-child {transform:rotate3d(0,1,0,180deg) translateZ(1px);}
+    .container pre:last-child {transform:none;}
+    /*如果元素具有透明效果,那么当我们rotate的时候,正反面都是可见的,如果想使其背面不可见:*/
+    .container0 > div {transform:rotate3d(0,1,0,135deg);backface-visibility: hidden;}
+    /*正常情况下*/
+    .container1 > div {transform:rotateY(135deg);}
+    /*背面隐藏*/
+    .container2 > div {transform:rotateY(135deg);}
+    .container2 pre {backface-visibility:hidden;}
+    /*还可以鼠标hover时做翻转*/
+    .container3 > div {transform:rotateY(45deg);}
+    .container3:hover div {transform:rotateY(135deg);}
+    .container3 pre {backface-visibility:hidden;}
+  </style>
+</head>
+<body>
+  <div class="container container0">
+    <div>
+      <pre>Z</pre>
+    </div>
+  </div>
+  <div class="container container1">
+    <div>
+      <pre>Z</pre>
+      <pre>J</pre>
+    </div>
+  </div>
+  <div class="container container2">
+    <div>
+      <pre>Z</pre>
+      <pre>J</pre>
+    </div>
+  </div>
+  <div class="container container3">
+    <div>
+      <pre>Z</pre>
+      <pre>J</pre>
+    </div>
+  </div>
+</body>
+</html>
